@@ -10,7 +10,7 @@ Matrix Algebra
 
 Group Member
 - Gelar Rahadian Fajar - 20230040043
-- Muhammad Irpan Arroyan - 2023-------
+- Muhammad Irpan Arroyan - 20230040118
 - Nabila Aulia Supandi - 2023-------
 - Muhammad Chairil Sutisna - 2023-------
 
