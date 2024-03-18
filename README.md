@@ -18,4 +18,4 @@ how to run the code?
 - install Vs Code
 - install extension Python in vs code
 - install library numpy "pip install numpy" (https://numpy.org/install/)
-- click run icon at the top right of the vs code window
+- click run matrix.py file (icon at the top right of the vs code window)
