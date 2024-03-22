@@ -22,7 +22,7 @@ def searchInverseMatrix(A,B):
             print_matrix(A)
             print('is: ')
             print('----------------------------------------------------------------')
-            print_matrix(A_inv)
+            print_matrix(B_inv)
         else:
             print('The determinant of the matrix is 0, so the inverse matrix is not possible.')
 
