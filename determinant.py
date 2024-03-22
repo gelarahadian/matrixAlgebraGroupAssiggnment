@@ -1,19 +1,16 @@
-from input_matrix import input_matrix
-import numpy as np
+from utils import print_matrix, determinant_matrix
 
 
 #3. How To Find The Determinant Matrix
-def searchDeterminantMatrix():
-    rows = int(input("Enter the number of rows of the matrix: "))
-    cols = int(input("Enter the number of columns of the matrix: "))
-    # Input matriks A
-    print("\nEnter matrix A:")
-    A = input_matrix(rows, cols)
-    if A is None:
-        return
-    
-    print("Transpose of the matrix: ")
-    print(A,  'is: ')
-    print('----------------------------------------------------------------')
-    print(np.linalg.det(A))
+def searchDeterminantMatrix(A, B):
+    chooseMatrix = input("which matrix to search for looking determinant? (a/b): ")
+    if chooseMatrix == 'a' or chooseMatrix == 'A':
+        print("the matrix A: ")
+        print_matrix(A)
+        print('the determinant of matrix A is: ', determinant_matrix(A))
+    elif chooseMatrix == 'b' or chooseMatrix == 'B':
+        print("the matrix B: ")
+        print_matrix(B)
+        print('the determinant of matrix B is: ', determinant_matrix(B))
+
     

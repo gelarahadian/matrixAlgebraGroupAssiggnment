@@ -1,33 +1,12 @@
-from input_matrix import input_matrix
-import numpy as np
-
+from utils import  print_matrix, increase_matrix, decrease_matrix, matrix_multiplication, matrix_scalar_multiplication
 
 
 #1. Matrix Operation (+, -, x)
-def matrixOperation ():
-    rows = int(input("Enter the number of rows of the matrix: "))
-    cols = int(input("Enter the number of columns of the matrix: "))
-
-    # Input matriks A
-    print("\nEnter matrix A:")
-    A = input_matrix(rows, cols)
-    if A is None:
-        return
-    print("matriks A is: ")
-    print(A)
-
-    # Input matriks B
-    print("\nEnter matrix B:")
-    B = input_matrix(rows, cols)
-    if B is None:
-        return
-    print("matriks B is: ")
-    print(B)
-
+def matrixOperation (A, B):
     print('Matriks A is: ')
-    print(A)
+    print_matrix(A)
     print('Matriks B is: ')
-    print(B)
+    print_matrix(B)
     print("Type of matrix operations:")
     print('1. Increase matrix ( + )')
     print('2. Decrease matrix ( - )')
@@ -37,10 +16,12 @@ def matrixOperation ():
 
     if typeOperation == 'increase' or typeOperation == '+' or typeOperation == '1':
         print('You has Choose the type of operation ( increase ( + ) ) the result is:')
-        print(A + B)
+        result = increase_matrix(A, B)
+        print_matrix(result)
     elif typeOperation == 'decrease' or typeOperation == '-' or typeOperation == '2':
         print('You has Choose the type of operation ( decrease ( - ) ) the result is:')
-        print(A - B)
+        result = decrease_matrix(A, B)
+        print_matrix(result)
     elif typeOperation == 'multiply' or typeOperation == '*' or typeOperation == '3':
         print('1.A * B')
         print('2.A * Skalar')
@@ -48,15 +29,16 @@ def matrixOperation ():
         typeOperationMultiply = input('Choose the type of operation ( multiply): ')
         if typeOperationMultiply == '1':
             print('A * B is: ')
-            print(np.dot(A, B))
+            result = matrix_multiplication(A, B)
+            print_matrix(result)
         elif typeOperationMultiply == '2':
             skalar = int(input('Type Number Of Skalar:'))
+            result = matrix_scalar_multiplication(A, skalar)
             print('A * ', skalar, ' is: ')
-            print(A * skalar)
+            print_matrix(result)
         elif typeOperationMultiply == '3':
             skalar = int(input('Type Number Of Skalar: '))
+            result = (matrix_scalar_multiplication(B, skalar))
             print('B * ', skalar,'is: ')
-            print(B * skalar)
-
-        print('You has Choose the type of operation ( Multiply ( * ) ) the result is:')
-        print()
+            print_matrix(result)
+    

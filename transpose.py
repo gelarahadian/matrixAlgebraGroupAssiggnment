@@ -1,22 +1,15 @@
-from input_matrix import input_matrix
-import numpy as np
-
+from utils import print_matrix, transpose_matrix
 
 #2. How to Transpose Matrix
-def searchTransposeMatrix():
-
-    rows = int(input("Enter the number of rows of the matrix: "))
-    cols = int(input("Enter the number of columns of the matrix: "))
-    # Input matriks A
-    print("\nEnter matrix A:")
-    A = input_matrix(rows, cols)
-    if A is None:
-        return
-    
-    print("Transpose of the matrix: ")
-    print(A,  'is: ')
-    print('--------------------------------')
-    print(np.transpose(A))
-
-    
-print("\nEnter")
+def searchTransposeMatrix(A, B):    
+    chooseMatrix = input("which matrix to search for transpose? (a/b): ")
+    if chooseMatrix == 'a' or chooseMatrix == 'A':
+        print_matrix(A)
+        print('the transpose of matrix A is: ')
+        print('--------------------------------')
+        print_matrix(transpose_matrix(A))
+    elif chooseMatrix == 'b' or chooseMatrix == 'B':
+        print_matrix(B)
+        print('the transpose of matrix B is: ')
+        print('--------------------------------')
+        print_matrix(transpose_matrix(B))
